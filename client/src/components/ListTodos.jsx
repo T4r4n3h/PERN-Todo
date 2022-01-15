@@ -35,7 +35,7 @@ const ListTodos = () => {
 
     useEffect(() =>{
         getTodos();
-    });
+    },[]);
 
     // console.log('this is todos:',todos)// just get a the array of Todos
 

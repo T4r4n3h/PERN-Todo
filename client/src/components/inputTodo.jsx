@@ -13,14 +13,15 @@ const InputTodo = ()=> {
                `http://localhost:8000/todos`,
                {
                method: "POST",
-               header: { "Content-Type": "application/json" },
+               headers: { "Content-Type": "application/json" },
                body: JSON.stringify(body)
                 }
            );
+           let Response = response.json();// this is to log!
            console.log("BODY",body);
-           console.log("RESPONSE",response)
+           console.log("RESPONSE",Response)
            console.log("DESC",description);
-        //    window.location = "/"; //this is to refresh the page 
+           window.location = "/"; //this is to refresh the page 
         } catch (err) {
             console.error(err.message);
         }
